@@ -246,7 +246,7 @@ int main() {
 			cout << "Время поиска макс. и мин. элементов в неотсортированном массиве составило " << duration1 << " наносекунд.\n";
 
 			auto start2 = high_resolution_clock::now();
-			int mn1 = sortedArr[0], mx1 = sortedArr[arrLenght];
+			int mn1 = sortedArr[0], mx1 = sortedArr[arrLenght-1];
 			auto end2 = high_resolution_clock::now();
 			auto duration2 = duration_cast<nanoseconds>(end2 - start2).count();
 			cout << "Время поиска макс. и мин. элементов в отсортированном массиве составило " << duration2 << " наносекунд.\n";
