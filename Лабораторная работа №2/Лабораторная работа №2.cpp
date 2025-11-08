@@ -380,7 +380,7 @@ int main() {
 			auto start = high_resolution_clock::now();
 			for (int i = 0; i < arrLenght; ++i) {
 				if (sortedArr[i] == n) {
-					cout << "Искомое значение n = " << n << "есть в отсортированном массиве, он находится на позиции " << i << '\n';
+					cout << "Искомое значение n = " << n << " есть в отсортированном массиве, он находится на позиции " << i << '\n';
 					k += 1;
 					break;
 				}
@@ -398,7 +398,7 @@ int main() {
 				cout << "Искомый элемент не найден в отсортированном масиве\n";
 			}
 			else {
-				cout << "Искомое значение n = " << n << "есть в отсортированном массиве, он находится на позиции " << result << '\n';
+				cout << "Искомое значение n = " << n << " есть в отсортированном массиве, он находится на позиции " << result << '\n';
 			}
 			auto end1 = high_resolution_clock::now();
 			auto duration1 = duration_cast<nanoseconds>(end1 - start1).count();
