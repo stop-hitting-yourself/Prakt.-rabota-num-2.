@@ -8,7 +8,7 @@ using namespace std::chrono;
 const int arrLenght = 100;
 
 void elementsExchange(int* arr1, int* arr2) {
-	for (int i = 0; i < 100; ++i) {
+	for (int i = 0; i < arrLenght; ++i) {
 		arr2[i] = arr1[i];
 	}
 }
@@ -246,18 +246,7 @@ int main() {
 			cout << "Время поиска макс. и мин. элементов в неотсортированном массиве составило " << duration1 << " наносекунд.\n";
 
 			auto start2 = high_resolution_clock::now();
-			int mn1 = sortedArr[0], mx1 = sortedArr[0];
-
-			for (int i = 1; i < arrLenght; ++i) {
-				if (sortedArr[i] > mx1) {
-					mx1 = sortedArr[i];
-				}
-			}
-			for (int i = 1; i < arrLenght; ++i) {
-				if (sortedArr[i] < mn1) {
-					mn1 = sortedArr[i];
-				}
-			}
+			int mn1 = sortedArr[0], mx1 = sortedArr[arrLenght];
 			auto end2 = high_resolution_clock::now();
 			auto duration2 = duration_cast<nanoseconds>(end2 - start2).count();
 			cout << "Время поиска макс. и мин. элементов в отсортированном массиве составило " << duration2 << " наносекунд.\n";
